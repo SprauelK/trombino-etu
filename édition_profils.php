@@ -3,13 +3,13 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Trombétu</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="image\favicon\pronote.png" />
+    <link rel="icon" type="image/png" href="image/favicon/pronote.png" />
     
 </head>
 <body>
 <header>
     <div class="logo1">
-    <img src="image\logo\logotrombino.png" height="57" width="57" alt=""/>
+    <img src="image/logo/logotrombino.png" height="57" width="57" alt=""/>
     </div>
     <h1 class="title">Trombino-étu |</h1>
     <nav>
