@@ -1,0 +1,23 @@
+{
+
+	"listeFilieres":[
+		 {
+			 	"nomFiliere":"LPI",
+			 	"groupes":[
+			 		"LPI-1",
+			 		"LPI2",
+			 		"LPI3"
+			 	]
+			 },
+
+
+			 {
+			  "nomFiliere":"L1-MIPI",
+			  "groupes":[
+			  		"A1",
+			  		"B2",
+			  		"D1"
+			  ]
+		 },
+	]
+}
