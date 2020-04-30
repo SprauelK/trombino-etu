@@ -24,6 +24,40 @@
         </ul>
     </nav>
 </header>
-    <h2>Information de l'étudiant</h2>
-</body>
+
+	<div class = "meteo-div">
+	<br>
+		<table align="center">
+		<tbody id = "meteo">
+			<tr>
+				<td width="80%">
+				<fieldset class ="login">
+					<legend><h2>Connexion</h2> </legend> 
+					<div>
+					
+					<form  method="post" action="connexion.php">
+						<div class = "erreur-connexion">
+							<?php
+								$matchFound = (isset($_GET["erreur"]) && trim($_GET["erreur"]) == 'connexionErreur');
+								if($matchFound){
+									echo '<p>Login ou mot de passe incorrect.</p>';
+								}
+							
+							?>
+						</div>
+						<p>Email: <br/> <input required  minlength="5" type="text" name="login"/> </p>
+						<p>Mot de passe: <br/> <input required  minlength="8" type="password" name="password"/> </p>
+							
+						<input type="submit" name="valider" value="valider"/>
+								   
+					</form>
+					<br>
+				<a href="formulaire_inscription.php"> pas encore de compte ?<span class="pw-oublie"> Inscrivez-vous ici</span></a>
+				</div>
+				</fieldset>
+			</td>
+			</tr>
+		</tbody>
+	</table>
+	</body>
 </html>
