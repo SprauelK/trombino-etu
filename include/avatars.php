@@ -13,7 +13,7 @@ if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name'])) {
                'avatar' => $_SESSION['id'].".".$extensionUpload,
                'id' => $_SESSION['id']
                ));
-            header('Location: profil.php?id='.$_SESSION['id']);
+            header('Location: information-etu.php?id='.$_SESSION['id']);
          } else {
             $msg = "Erreur durant l'importation de votre photo de profil";
          }
