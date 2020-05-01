@@ -17,13 +17,15 @@
         <ul>
             <li class="menu1"><a href="index.php">Accueil</a>
             </li>
-            <li class="menu1"><a href="formulaire_connexion.php">Connexion</a>
+            <li class="menu1"><a href="index.php">Connexion</a>
             </li>
             <li class="menu1"><a href="formulaire_inscription.php">Inscription</a>
             </li>
         </ul>
     </nav>
 </header>
+
+      <!-- -------formulaire de connexion--------- -->
 
 	<div class = "meteo-div">
 	<br>
@@ -32,7 +34,7 @@
 			<tr>
 				<td width="80%">
 				<fieldset class ="login">
-					<legend><h2>Connexion</h2> </legend> 
+					<legend><h2>Connexion</h2></legend> 
 					<div>
 					
 					<form  method="post" action="connexion.php">
@@ -52,7 +54,7 @@
 								   
 					</form>
 					<br>
-				<a href="formulaire_inscription.php"> pas encore de compte ?<span class="pw-oublie"> Inscrivez-vous ici</span></a>
+				<p>Pas encore de compte ? : </p><a href="formulaire_inscription.php"><span class="pw-oublie"> Inscrivez-vous ici</span></a>
 				</div>
 				</fieldset>
 			</td>

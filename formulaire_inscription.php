@@ -17,13 +17,15 @@
         <ul>
             <li class="menu1"><a href="index.php">Accueil</a>
             </li>
-            <li class="menu1"><a href="formulaire_connexion.php">Connexion</a>
+            <li class="menu1"><a href="index.php">Connexion</a>
             </li>
             <li class="menu1"><a href="formulaire_inscription.php">Inscription</a>
             </li>
         </ul>
     </nav>
 </header>
+
+      <!-- -------formulaire d'inscription--------- -->
 	<div class = "meteo-div">
 	<br>
 	<table align="center">
@@ -35,13 +37,13 @@
 					<div>
 					
 					<form  method="post" action="inscription.php">
-						<p>Nom:  <br/> <input required  minlength="5" type="text" name="nom"/> </p>
-						<p>Prénom: <br/> <input required  minlength="8" type="text" name="prenom"/> </p>
-						<p>Email: <br/> <input required  minlength="8" type="email" name="email"/> </p>
-						<p>Téléphone: <br/> <input required  minlength="10" type="float" name="telephone"/> </p>
-						<p>Adresse: <br/> <input required  minlength="8" type="text" name="adresse"/> </p>
-						<p>Filière: <br/> <input required  minlength="8" type="text" name="filière"/> </p>
-						<p>Groupe: <br/> <input required  minlength="8" type="text" name="groupe"/> </p>
+						<p>Nom:  <br/> <input required  minlength="1" type="text" name="nom"/> </p>
+						<p>Prénom: <br/> <input required  minlength="1" type="text" name="prenom"/> </p>
+						<p>Email: <br/> <input required  minlength="5" type="email" name="email"/> </p>
+						<p>Téléphone: <br/> <input required  minlength="9" type="float" name="telephone"/> </p>
+						<p>Adresse: <br/> <input required  minlength="4" type="text" name="adresse"/> </p>
+						<p>Filière: <br/> <input required  minlength="1" type="text" name="filière"/> </p>
+						<p>Groupe: <br/> <input required  minlength="1" type="text" name="groupe"/> </p>
 						<p>Mot de passe: <br/> <input required  minlength="8" type="password" name="password"/> </p>
 							
 						<input type="submit" name="valider" value="valider"/>
@@ -49,25 +51,27 @@
 							<?php
 								$matchFound = (isset($_GET["erreur"]) && trim($_GET["erreur"]) == 'erreurInscription');
 								if($matchFound){
-									echo '<p>Login existe, veuillez vous connectez.</p>';
+									echo '<p>l email existe deja, veuillez vous connectez.</p>';
 								}
 							
 							?>
 
 							<?php
+							/*
 								//Hachage du mot de passe
-								$pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+								$pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 								//Insertion
-								$req = $bdd->prepare('INSERT INTO membres(nom, prenom, email, telephone, adresse, filliaire, groupe, pass) VALUES(:nom, :prenom, :email, :telephone, :adresse, :filliaire, :groupe, :pass)');
+								$req = $bdd->prepare('INSERT INTO membres(nom, prenom, email, telephone, adresse, filliaire, groupe, password) VALUES(:nom, :prenom, :email, :telephone, :adresse, :filliaire, :groupe, :password)');
 								$req->execute(array(
 									'nom' => $nom,
 									'prenom' => $prenom,
+									'email' => $email,
 									'telephone' => $telephone,
 									'adresse' => $adresse,
 									'filière' => $filière,
 									'groupe' => $groupe,
-									'pass' => $pass_hache,
+									'password' => $pass_hache,
 									'email' => $email));
 
 								//  Récupération de l'utilisateur et de son pass hashé
@@ -94,12 +98,12 @@
 								else {
 									echo 'Mauvais email ou mot de passe !';
 								}
-
+								*/
 							?>
 						</div>		   
 					</form>
 					<br>
-					<a href="formulaire_connexion.php"><span class="pw-oublie">Vous possedez un compte&nbsp;?</span></a>
+					<a href="formulaire_connexion.php"><span class="pw-oublie">Vous possedez deja un compte&nbsp;?</span></a>
 					</div>
 				</fieldset>
 			</td>
