@@ -2,7 +2,7 @@
 
 //choisi une longueur entre 0 et long max de la liste
 
-function random($Longueur){
+function getRandomKey(){
 
 	$liste = 'azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN7894561230';
 	$longmax = strlen($liste);
@@ -14,7 +14,7 @@ function random($Longueur){
 	return $chaineAleatoire;
 }
 
-echo random(9);
+//echo getRandomKey();
 
 //récupère les email, les stocks, et donne la key générée graçe à la fonction random et les stock avec les email. Vérifie que la key n'existe pas deja.
 /*
