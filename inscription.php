@@ -34,7 +34,7 @@
 	else {
 		$fichier_end = fopen($fichier,"a");
 		fwrite($fichier_end,"\n");
-		fwrite($fichier_end, $prenom. ";" .$nom. ";" .$email. ";" .$telephone. ";" .$adresse. ";" .$filiere. ";" .$groupe. ";" .$password);
+		fwrite($fichier_end, $nom. ";" .$prenom. ";" .$email. ";" .$telephone. ";" .$adresse. ";" .$filiere. ";" .$groupe. ";" .$password);
 		
 		fclose($fichier_end);
 		header('Location: ./index.php');

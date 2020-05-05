@@ -24,3 +24,28 @@
         </ul>
     </nav>
 </header>
+
+<div class = "meteo-div">
+    <br>
+        <table align="center">
+        <tbody id = "meteo">
+            <tr>
+                <td width="80%">
+                <fieldset class ="login">
+                    <legend><h2>Inscription API Key</h2></legend> 
+                    <div>
+                    
+                    <form  method="post" action="./fonction_inscription_api.php">
+
+                        <p>Email: <br/> <input required  minlength="5" type="float" name="email"/> </p>
+                            
+                        <input type="submit" name="valider" value="valider"/>
+                                   
+                    </form>
+                    <br>
+                </div>
+                </fieldset>
+            </td>
+            </tr>
+        </tbody>
+    </table>

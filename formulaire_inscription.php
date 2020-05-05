@@ -60,51 +60,7 @@
 						<p>Mot de passe: <br/> <input required  minlength="8" type="password" name="password"/> </p>
 							
 						<input type="submit" name="valider" value="valider"/>
-
-							<?php
-							/*
-								//Hachage du mot de passe
-								$pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-								//Insertion
-								$req = $bdd->prepare('INSERT INTO membres(nom, prenom, email, telephone, adresse, filliaire, groupe, password) VALUES(:nom, :prenom, :email, :telephone, :adresse, :filliaire, :groupe, :password)');
-								$req->execute(array(
-									'nom' => $nom,
-									'prenom' => $prenom,
-									'email' => $email,
-									'telephone' => $telephone,
-									'adresse' => $adresse,
-									'filière' => $filière,
-									'groupe' => $groupe,
-									'password' => $pass_hache,
-									'email' => $email));
-
-								//  Récupération de l'utilisateur et de son pass hashé
-								$req = $bdd->prepare('SELECT id, pass FROM membres WHERE email = :email');
-								$req->execute(array(
-									'email' => $email));
-								$resultat = $req->fetch();
-
-								// Comparaison du pass envoyé via le formulaire avec le csv
-								$isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
-
-								if (!$resultat)
-								{
-									echo 'Mauvais identifiant ou mot de passe !';
-								}
-								else
-								{
-									if ($isPasswordCorrect) {
-								        session_start();
-								        $_SESSION['id'] = $resultat['id'];
-								        $_SESSION['email'] = $email;
-								        echo 'Vous êtes connecté !';
-								}
-								else {
-									echo 'Mauvais email ou mot de passe !';
-								}
-								*/
-							?>
+						
 						</div>		   
 					</form>
 					<br>
