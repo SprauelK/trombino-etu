@@ -17,9 +17,9 @@
         <ul>
             <li class="menu1"><a href="index.php">Accueil</a>
             </li>
-            <li class="menu1"><a href="index.php">Connexion</a>
-            </li>
             <li class="menu1"><a href="formulaire_inscription.php">Inscription</a>
+            </li>
+            <li class="menu1"><a href="inscription_api.php">Clé API</a>        	
             </li>
         </ul>
     </nav>
@@ -42,19 +42,24 @@
 						<p>Email: <br/> <input required  minlength="5" type="email" name="email"/> </p>
 						<p>Téléphone: <br/> <input required  minlength="9" type="float" name="telephone"/> </p>
 						<p>Adresse: <br/> <input required  minlength="4" type="text" name="adresse"/> </p>
-						<p>Filière: <br/> <input required  minlength="1" type="text" name="filière"/> </p>
-						<p>Groupe: <br/> <input required  minlength="1" type="text" name="groupe"/> </p>
+
+						<select name="filiere">
+							<option value="L1-MIPI">L1-MIPI</option>
+							<option value="L2-MI">L2-MI</option>
+							<option value="L3-I">L3-I</option>
+							<option value="LPI-RS">LPI-RS</option>
+							<option value="LPI-RIWS">LPI-RIWS</option>
+						</select>
+						<select name="groupe">
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+
+
 						<p>Mot de passe: <br/> <input required  minlength="8" type="password" name="password"/> </p>
 							
 						<input type="submit" name="valider" value="valider"/>
-						<div class = "erreur-connexion">
-							<?php
-								$matchFound = (isset($_GET["erreur"]) && trim($_GET["erreur"]) == 'erreurInscription');
-								if($matchFound){
-									echo '<p>l email existe deja, veuillez vous connectez.</p>';
-								}
-							
-							?>
 
 							<?php
 							/*

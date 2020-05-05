@@ -11,7 +11,7 @@
     <div class="logo1">
     <img src="image\logo\logotrombino.png" height="57" width="57" alt=""/>
     </div>
-    <h1 class="title">Trombino-étu |</h1>
+    <h1>Trombino-étu |</h1>
     <nav>
   <a href="index.php" id="logo"></a>
         <ul>
@@ -24,11 +24,3 @@
         </ul>
     </nav>
 </header>
-<h2>Vos Informations personelles</h2>
-<div>
-	<p>Changer la photo de profil</p>
-	<form>
-		<input type="file" name="fichier" size="30">
-		<input type="submit" name="upload" value="Télécharger">
-	</form>
-</div>

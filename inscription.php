@@ -12,24 +12,22 @@
 	
 
 	$doesUserExist = FALSE;
-	$fichier = "utilisateur.csv";
+	$fichier = "./data/liste_info_etudiants.csv";
 	$lines = file($fichier);
 
-	for($i=0;$i<sizeof($lines);$i++){	
-		$line = $lines[$i];
-		echo $line.'\n';
-		$tab= explode(";",$line);
+	foreach ($lines as $line){
+		if(strstr($line,$email)){
 
-		if ($tab[0] == $email){
-			
 			$doesUserExist = TRUE;
-			break; //Sortir de la boucle
+			break;
 		}
 	}
 
 	if( $doesUserExist == TRUE )
 	{
-		header('formulaire_inscription.php?erreur=erreurInscription');  
+	
+			echo '<p>l email existe deja, veuillez <a href="index.php">vous connectez</a></p>';
+		
 		exit();  
 	}
 
@@ -40,7 +38,6 @@
 		
 		fclose($fichier_end);
 		header('Location: ./index.php');
-		/*header ('Location: https://http://trombino-etu.alwaysdata.net/index.php/ ') */
 		exit();
 	}
 

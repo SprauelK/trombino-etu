@@ -11,19 +11,29 @@
     <div class="logo1">
     <img src="image\logo\logotrombino.png" height="57" width="57" alt=""/>
     </div>
-    <h1 class="title">Trombino-étu |</h1>
+    <h1>Trombino-étu |</h1>
     <nav>
   <a href="index.php" id="logo"></a>
         <ul>
             <li class="menu1"><a href="index.php">Accueil</a>
             </li>
-            <li class="menu1"><a href="index.php">Connexion</a>
-            </li>
             <li class="menu1"><a href="formulaire_inscription.php">Inscription</a>
+            </li>
+            <li class="menu1"><a href="inscription_api.php">Clé API</a>        	
             </li>
         </ul>
     </nav>
 </header>
+
+<div style="margin-top: 30px">
+	<h3 style="color:#323C49">
+		Trombétu propose aux étudiants de mettre à jour leurs informations personnelles afin d'aider l'administration de la faculté à trouver les étudiants et leurs informations scolaires.
+	</h3>
+	<h3 style="color:#323C49">
+		Vous pouvez vous connecter ci-dessous ou vous <a href="formulaire_inscription.php">inscrire ici</a> si vous n'avez pas encore de compte.
+	</h3>
+</div>
+	
 
       <!-- -------formulaire de connexion--------- -->
 
@@ -38,16 +48,8 @@
 					<div>
 					
 					<form  method="post" action="connexion.php">
-						<div class = "erreur-connexion">
-							<?php
-								$matchFound = (isset($_GET["erreur"]) && trim($_GET["erreur"]) == 'connexionErreur');
-								if($matchFound){
-									echo '<p>Login ou mot de passe incorrect.</p>';
-								}
-							
-							?>
-						</div>
-						<p>Email: <br/> <input required  minlength="5" type="text" name="login"/> </p>
+
+						<p>Email: <br/> <input required  minlength="5" type="float" name="email"/> </p>
 						<p>Mot de passe: <br/> <input required  minlength="8" type="password" name="password"/> </p>
 							
 						<input type="submit" name="valider" value="valider"/>
