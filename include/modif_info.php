@@ -20,7 +20,7 @@
         $Fecriture = fopen('./data/liste_info_etudiants.csv', 'w');
         fputs($Fecriture, $modification);
         fclose($Fecriture);
-        exit(header("Location: ./information.php"));
+        exit(header("Location: ./info_etudiant.php"));
     }
 
 ?>

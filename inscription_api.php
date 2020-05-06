@@ -1,3 +1,9 @@
+<?php 
+
+include('./include/get_api.inc.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -19,7 +25,7 @@
             </li>
             <li class="menu1"><a href="formulaire_inscription.php">Inscription</a>
             </li>
-            <li class="menu1"><a href="inscription_api.php">Clé API</a>        	
+            <li class="menu1"><a href="inscription_api.php">Clé API</a>    	
             </li>
         </ul>
     </nav>
@@ -32,14 +38,25 @@
             <tr>
                 <td width="80%">
                 <fieldset class ="login">
-                    <legend><h2>Inscription API Key</h2></legend> 
+                    <legend><h2>Inscription API Key</h2></legend>
                     <div>
                     
-                    <form  method="post" action="./fonction_inscription_api.php">
+                    <form  method="post" action="./include/get_api.inc.php">
 
                         <p>Email: <br/> <input required  minlength="5" type="float" name="email"/> </p>
                             
                         <input type="submit" name="valider" value="valider"/>
+
+                        <?php
+
+                        if( isset($_POST["email"]) ){
+
+                            $k = getRandomKey( $_POST["email"] );
+
+                                
+                        }
+
+                        ?>
                                    
                     </form>
                     <br>

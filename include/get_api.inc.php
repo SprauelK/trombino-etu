@@ -1,11 +1,23 @@
 <?php
 
-include 'genere_keys.inc.php';
+function getRandomKey(){
 
-function getApiKey( $email){
+	$liste = 'azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN7894561230';
+	$longmax = strlen($liste);
+	$chaineAleatoire = '';
+	for($i = 0; $i <$longmax; $i++)
+	{
+		$chaineAleatoire .= $liste[rand(0, $longmax - 1)];
+	}
+	return $chaineAleatoire;
+}
 
-$email = $_POST["email"];
+
+function getApiKey( $email ){
+
+
 $key = getRandomKey();
+$existKey = '';
 
 
 $doesUserExist = FALSE;
@@ -23,7 +35,7 @@ $doesUserExist = FALSE;
 	if( $doesUserExist == TRUE )
 	{
 	
-			echo 'redonne la kley api stocké';
+			return $key;
 		
 		exit();  
 	}
@@ -31,14 +43,14 @@ $doesUserExist = FALSE;
 	else {
 		$fichier_end = fopen($fichier,"a");
 		fwrite($fichier_end,"\n");
-		fwrite($fichier_end, $email. ";" .$key.);
+		fwrite($fichier_end, $email. ";" .$key );
 		
 		fclose($fichier_end);
-		echo '$key';
+		return $key;
 		exit();
 	}
 
-	return...
+
 }
 
 ?>
