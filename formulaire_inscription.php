@@ -64,7 +64,7 @@
 						</div>		   
 					</form>
 					<br>
-					<a href="formulaire_connexion.php"><span class="pw-oublie">Vous possedez deja un compte&nbsp;?</span></a>
+					<a href="formulaire_connexion.php"><span class="pw-oublie">Vous possedez deja un compte ?</span></a>
 					</div>
 				</fieldset>
 			</td>

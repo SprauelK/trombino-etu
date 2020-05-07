@@ -3,7 +3,7 @@ function avatar($Fichier){
 
    if( isset($_POST['upload']) ){
 
-      $content_dir = 'photos/';
+      $repertoire = 'photos/';
 
       $tmp_file = $_FILES['fichier']['tmp_name'];
 
@@ -13,11 +13,14 @@ function avatar($Fichier){
 
       $type_file = $_FILES['fichier']['type'];
 
-      if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg')){
+      if( !strstr($type_file, 'jpg') and !strstr($type_file, 'jpeg')){
          exit("Le fichier n'est pas au format accéptable");
       }
       if($_FILES['fichier']['type'] == 'image/jpeg') { $extention = '.jpg'; }
       if($_FILES['fichier']['type'] == 'image/jpg') {$extention = '.jpg'}
+
+         //stocker la photo
+         //if $_POST['upload'] alors la stoker dans ./photos
    }
 }
 

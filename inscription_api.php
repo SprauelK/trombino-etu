@@ -41,20 +41,32 @@ include('./include/get_api.inc.php');
                     <legend><h2>Inscription API Key</h2></legend>
                     <div>
                     
-                    <form  method="post" action="./include/get_api.inc.php">
+                    <form  method="post" action="inscription_api.php">
 
-                        <p>Email: <br/> <input required  minlength="5" type="float" name="email"/> </p>
+                        <p>Email: <br/> <input required  minlength="5" type="email" name="email"/> </p>
                             
                         <input type="submit" name="valider" value="valider"/>
 
                         <?php
 
-                        if( isset($_POST["email"]) ){
+                        $email = $_POST["email"];
 
-                            $k = getRandomKey( $_POST["email"] );
+                       // $call = getApiKey($email);
+
+                        $get_apikey = getRandomKey();
+
+                        //if( isset($email) ){
+
+                          //  $k = getRandomKey();
 
                                 
+                        //}
+
+                        if( isset($email) ){
+
+                            echo $get_apikey;
                         }
+
 
                         ?>
                                    

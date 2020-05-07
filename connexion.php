@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 	$email = $_POST["email"];
 	$password = $_POST["password"];
@@ -25,6 +26,12 @@
 	}
 
 	else{
+
+		$_SESSION["login"] = $_POST['email'];
+
+
 		header("Location: ./info_etudiant.php");
+
+
 	}
 ?>
